@@ -1,0 +1,668 @@
+<html>
+
+	<head>
+	<meta charset="utf-8">
+		<title>Data Wisata - WonderfulVacation</title>	
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script type="text/javascript" src="Grafik/chart.js/Chart.js"></script>
+	</head>
+	
+<body>
+		<div class="navigation">
+			<label class="name-web">Wonderful<span>Vacation</span></label>
+		
+		<div class="topnav" id="myTopnav">
+				<a href="dashboard.html"><div class="fa fa-home"></div>Home</a>
+				<a href="artikel.html"><div class="fa fa-book"></div>Artikel</a>
+
+				<div class="dropdown">
+				<button class="dropbtn"><div class="fa fa-database"></div>Data Wisata<div class="fa fa-caret-down"></div></button>
+				<div class="dropdown-content">
+					<a href="#lokasi"><div class="fa fa-map-marker"></div>Lokasi</a>
+					<a href="#tabel"><div class="fa fa-ticket"></div>Harga Tiket</a>
+					<a href="#grafik"><div class="fa fa-bar-chart"></div>Grafik</a>
+				</div>
+				</div>
+
+				<a href="contact-us.html"><div class="fa fa-phone"></div>Contact Us</a>
+
+				<a href="#register_form" id="register_pop"><div class="fa fa-user"></div>Register</a>
+
+				<a href="javascript:void(0)" style="font-size: 15px;" class="icon" onclick="myFunction()">&#9776;</a>
+			</div>
+			</div>
+
+	<div class="register">
+		<div class="panel">
+			<a href="#x" class="overlay" id="register_form"></a>
+			<div class="popup">
+				<form>
+					
+				<p>Silahkan Masukkan Biodata Diri Anda untuk Register !!!</p>
+
+				<label>Nama Lengkap :</label>
+				<input type="text" name="nama" placeholder="Masukkan Nama Lengkap..." >
+
+				<label>Username :</label>
+				<input type="text" name="user" placeholder="Masukkan Username Anda...">
+
+				<label>Password :</label>
+				<input type="password" name="password" placeholder="Masukkan Password Anda...">
+
+				<label>Tanggal Lahir :</label>
+				<input type="date" name="tanggal">
+
+				<label>Email :</label>
+				<input type="email" name="email" placeholder="Masukkan E-mail Anda...">
+
+				<label>Kota</label>
+				<select name="kota">
+					<option>~Pilih Kota~</option>
+					<option value="Jakarta">Jakarta</option>
+					<option value="Bandung">Bandung</option>
+					<option value="Cirebon">Cirebon</option>
+					<option value="Semarang">Semarang</option>
+					<option value="Surabaya">Surabaya</option>
+					<option value="Medan">Medan</option>
+				</select>
+
+				<button type="submit" class="register-submit">Register Data</button>
+				<a class="close" href="#close"></a>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div class="pesan-tiket">
+		<div class="panel">
+			<a href="#x" class="overlay" id="pesan-tiket_form"></a>
+			<div class="popup">
+				<p>Silahkan Isi Formulir Pesan Tiket Anda,<span>
+					Mohon Sebelumnya Anda Register Terlebih Dahulu Agar Bisa Memesan Tiket !!!
+				</span> 
+				</p>
+
+				<label>Nama :</label>
+				<input type="text" name="Nama_pengguna" placeholder="Masukkan Nama Anda..." >
+
+				<label>Username :</label>
+				<input type="text" name="Username" placeholder="Masukkan Username Anda..." >
+
+				<label>Password :</label>
+				<input type="password" name="password" placeholder="Masukkan Password Anda..." >
+
+				<label>Tanggal :</label>
+				<input type="date" name="tanggal">
+
+				<label>Destinasi Wisata</label>
+				<select name="negara">
+					<option>~Pilih Tempat Wisata~</option>
+					<option value="Pantai Kejawanan">Pantai Kejawanan</option>
+					<option value="Goa Sunyaragi">Goa Sunyaragi</option>
+					<option value="Cirebon Waterland">Cirebon Waterland</option>
+					<option value="Keraton Kasepuhan">Keraton Kasepuhan</option>
+					<option value="Taman Kera Plangon">Taman Kera Plangon</option>
+					<option value="Telaga Nilam">Telaga Nilam</option>
+				</select>
+
+				<label>Jenis Pembayaran : 
+				<input type="radio" name="payment" value="non-tunai"> ATM/Non-Tunai
+				<input type="radio" name="payment" value="tunai"> Cash/Tunai </label> 
+
+				<button type="submit" class="pesan-tiket-submit">Pesan Tiket</button>
+				<a class="close" href="#close"></a>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="section1-data-wisata">
+		<div class="search-results">
+			<form method="post" action="">
+			<input type="text" id="search-input" placeholder="Silahkan cari destinasi wisata yang anda inginkan..."/>
+			<button type="submit" class="mencari"><div class="fa fa-search"></div></button>
+			</form>
+		</div>
+		<div class="sambutan-data-wisata">
+
+			<p>
+				<label class="sambutan1"> Data Wisata Wonderful<span>Vacation</span> !!</label>
+				<br>
+				<br>
+				Kami dengan senang hati menyambut Anda di platform ini, tempat di mana informasi wisata berkualitas tinggi mudah diakses. Dengan tekad untuk memberikan pengalaman perjalanan yang tak terlupakan, kami hadir untuk memenuhi kebutuhan informasi perjalanan Anda.
+				<br>
+				<br>
+				Di sini, Anda akan menemukan beragam destinasi menarik dari berbagai sudut dunia. Mulai dari destinasi wisata terkenal hingga tempat tersembunyi yang jarang terjamah, kami berkomitmen untuk memberikan ulasan yang akurat dan lengkap.
+				<br>
+				<br>
+				Tim kami terdiri dari para pecinta perjalanan dan ahli wisata yang berdedikasi untuk menyajikan data terbaru mengenai lokasi, harga tiket, dan grafik wisatawan. Beserta tips bermanfaat untuk membantu Anda merencanakan perjalanan tanpa kendala. Dengan dukungan kami, nikmatilah sensasi petualangan yang tak tertandingi dan temukan pesona unik dari setiap destinasi yang Anda kunjungi.
+				<br>
+				<br>
+				Website Data Wisata ini selalu berusaha untuk menghadirkan konten berkualitas dan informatif, serta kami senantiasa berusaha untuk meningkatkan layanan kami. Jangan ragu untuk memberikan masukan, saran, atau pertanyaan kepada kami melalui formulir kontak yang telah disediakan.
+				<br>
+				<br>
+				Terima kasih telah bergabung dengan kami!
+				<br>
+				<br>
+				Salam hangat,
+				<br>
+				Tim Data Wisata <b>Wonderful<span>Vacation</span></b>
+			</p>
+			
+		</div>
+	</div>
+
+	<div class="section4" id="lokasi">
+	
+		<h2>Lokasi Berbagai Destinasi Wisata</h2>
+		<div class="box">
+			<figure>
+				<img src="image/kejawanan.png">
+				<figcaption>Pantai Kejawanan</figcaption>
+			</figure>
+		<div class="maps">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.29672826278!2d108.5832160738846!3d-6.733607665836743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f1d64680065a1%3A0x2d0117cd16e8c0fb!2sPantai%20Indah%20Kejawanan%20Cirebon!5e0!3m2!1sid!2sid!4v1690035958114!5m2!1sid!2sid" width="" height="" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		</div>
+		</div>
+
+		<div class="box">
+			<figure>
+				<img src="image/goa_sunyaragi.png">
+				<figcaption>Goa Sunyaragi</figcaption>
+			</figure>
+		<div class="maps">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.270959394169!2d108.5384466689738!3d-6.736762950945885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f1df257d4d4fb%3A0x8d4ea2ef1ff1103d!2sTaman%20Wisata%20Goa%20Sunyaragi%20Cirebon!5e0!3m2!1sid!2sid!4v1689946624657!5m2!1sid!2sid" width="" height="" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		</div>
+		</div>
+
+		<div class="box">
+			<figure>
+				<img src="image/waterland.png" alt="">
+				<figcaption>Cirebon Waterland</figcaption>
+			</figure>
+		<div class="maps">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.427978426076!2d108.57078377388434!3d-6.717513765676066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6ee28633008ab7%3A0xa45b9be49b4a148d!2sCirebon%20Waterland%20Ade%20Irma%20Suryani!5e0!3m2!1sid!2sid!4v1689946607911!5m2!1sid!2sid" width="" height="" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		</div>
+		</div>
+
+		<div class="box">
+			<figure>
+				<img src="image/kasepuhan.png" alt="">
+				<figcaption>Keraton Kasepuhan</figcaption>
+			</figure>
+		<div class="maps">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.3561308559397!2d108.56843117388459!3d-6.726328465764029!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6ee263eaaaaaab%3A0x20ea18cbfb1df195!2sKeraton%20Kasepuhan%20Cirebon!5e0!3m2!1sid!2sid!4v1689946656783!5m2!1sid!2sid" width="" height="" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		</div>
+		</div>
+
+		<div class="box">
+			<figure>
+				<img src="image/alun_kejaksan.png" alt="">
+				<figcaption>Alun - Alun Kejaksan</figcaption>
+			</figure>
+		<div class="maps">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.491181742507!2d108.55641377388433!3d-6.7097500655987306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6ee267cb8474b3%3A0x73c7df4620b5d915!2sAlun-Alun%20Kejaksan%2C%20Kota%20Cirebon!5e0!3m2!1sid!2sid!4v1690108423841!5m2!1sid!2sid" width="" height="" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		</div>	
+		</div>
+
+		<div class="box">
+			<figure>
+				<img src="image/batik_trusmi.png" alt="">
+				<figcaption>Kawasan Batik Trusmi</figcaption>
+			</figure>
+		<div class="maps">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.5596253605568!2d108.50579247388404!3d-6.7013325655149405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6ee193b48be581%3A0xdaa49b48b19ca154!2sKawasan%20Wisata%20Batik%20Trusmi!5e0!3m2!1sid!2sid!4v1690108511349!5m2!1sid!2sid" width="" height="" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		</div>	
+		</div>
+
+		<div class="box">
+			<figure>
+				<img src="image/plangon.png" alt="">
+				<figcaption>Taman Kera Plangon</figcaption>
+			</figure>
+		<div class="maps">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15847.840741110085!2d108.47525582905214!3d-6.7747006835227115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f1ef9c7471a0d%3A0x3ee1bf4561fce4d0!2sBukit%20Plangon!5e0!3m2!1sid!2sid!4v1692430247332!5m2!1sid!2sid" width="" height="" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		</div>	
+		</div>
+
+		<div class="box">
+			<figure>
+				<img src="image/telaga_nilam.png" alt="">
+				<figcaption>Telaga Nilam</figcaption>
+			</figure>
+		<div class="maps">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15847.420489803888!2d108.40831132997806!3d-6.787478483888993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f21db09c82651%3A0x3e3b3d95f0e580af!2sTelaga%20Nilam!5e0!3m2!1sid!2sid!4v1690108699879!5m2!1sid!2sid" width="" height="" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		</div>	
+		</div>
+	</div>
+
+	<div class="section5" id="tabel">
+	
+		<h2>Daftar Harga Tiket Masuk Destinasi Wisata di Cirebon</h2>
+
+		<div class="tabel-pantai-kejawanan">
+			<h3>Pantai Kejawanan</h3>
+			<table class="table-pantai-kejawanan"> 
+				<thead>
+					<tr>
+						<th>Nama Tempat Wisata</th>
+						<th>Harga Tiket Masuk</th>
+						<th>Jam Operasional</th>
+						<th>Pemesanan</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<tr>
+						<td>Pantai Kejawanan</td>
+						<td>Rp. 5.500</td>
+						<td>Setiap Hari 09.00 – 17.00 WIB</td>
+						<td><a href="#pesan-tiket_form" id="pesan-tiket_pop"><button>Pesan Tiket</button></a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="tabel-goa-sunyaragi">
+			<h3>Goa Sunyaragi</h3>
+			<table class="table-goa-sunyaragi"> 
+				<thead>
+					<tr>
+						<th>Nama Tempat Wisata</th>
+						<th>Harga Tiket Masuk</th>
+						<th>Jam Operasional</th>
+						<th>Pemesanan</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<tr>
+						<td rowspan="2">Goa Sunyaragi</td>
+						<td>Dewasa	Rp. 15.000</td>
+						<td>Weekday	08.00 – 17.00 WIB</td>
+						<td rowspan="2"><a href="#pesan-tiket_form" id="pesan-tiket_pop"><button>Pesan Tiket</button></a></td>
+						<tr>
+						<td>Pelajar/Mahasiswa	Rp. 10.000</td>
+						<td>Weekend	08.00 – 18.00 WIB</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		
+		<div class="tabel-cirebon-waterland">
+			<h3>Cirebon Waterland</h3>
+			<table class="table-cirebon-waterland"> 
+				<thead>
+					<tr>
+						<th>Nama Tempat Wisata</th>
+						<th>Harga Tiket Masuk</th>
+						<th>Jam Operasional</th>
+						<th>Pemesanan</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<tr>
+						<td rowspan="4">Cirebon Waterland</td>
+						<td>Tiket Masuk	Rp. 25.000</td>
+						<td rowspan="4">Senin – Minggu	09.00 – 17.00 WIB</td>
+						<td rowspan="4"><a href="#pesan-tiket_form" id="pesan-tiket_pop"><button>Pesan Tiket</button></a></td>
+						<tr>
+						<td>Tiket Renang	Rp. 15.000</td>
+						<tr>
+						<td>Tiket Masuk + Renang	Rp. 40.000</td>
+						<tr>
+						<td>Promo Tiket Masuk (Include Renang) Juni – 15 Agustus 2023	Rp. 25.000</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="tabel-keraton-kasepuhan">
+			<h3>Keraton Kasepuhan</h3>
+			<table class="table-keraton-kasepuhan"> 
+				<thead>
+					<tr>
+						<th>Nama Tempat Wisata</th>
+						<th>Harga Tiket Masuk</th>
+						<th>Jam Operasional</th>
+						<th>Pemesanan</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<tr>
+						<td>Keraton Kasepuhan</td>
+						<td>Tiket Masuk	Rp. 20.000</td>
+						<td>Setiap Hari	08.00 – 18.00 WIB</td>
+						<td><a href="#pesan-tiket_form" id="pesan-tiket_pop"><button>Pesan Tiket</button></a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="tabel-alun-kejaksan">
+			<h3>Alun - Alun Kejaksan</h3>
+			<table class="table-alun-kejaksan"> 
+				<thead>
+					<tr>
+						<th>Nama Tempat Wisata</th>
+						<th>Harga Tiket Masuk</th>
+						<th>Jam Operasional</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<tr>
+						<td>Alun - Alun Kejaksan</td>
+						<td>Gratis</td>
+						<td>Setiap Hari 24 Jam</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="tabel-batik-trusmi">
+			<h3>Kawasan Batik Trusmi</h3>
+			<table class="table-batik-trusmi"> 
+				<thead>
+					<tr>
+						<th>Nama Tempat Wisata</th>
+						<th>Harga Tiket Masuk</th>
+						<th>Jam Operasional</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<tr>
+						<td>Kawasan Batik Trusmi</td>
+						<td>Gratis</td>
+						<td>Setiap Hari 08.00 – 20.00 WIB</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="tabel-plangon">
+			<h3>Taman Kera Plangon</h3>
+			<table class="table-plangon"> 
+				<thead>
+					<tr>
+						<th>Nama Tempat Wisata</th>
+						<th>Harga Tiket Masuk</th>
+						<th>Jam Operasional</th>
+						<th>Pemesanan</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<tr>
+						<td>Taman Kera Plangon</td>
+						<td>Rp. 3.000</td>
+						<td>Setiap Hari 24 Jam</td>
+						<td><a href="#pesan-tiket_form" id="pesan-tiket_pop"><button>Pesan Tiket</button></a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="tabel-telaga-nilam">
+			<h3>Telaga Nilam</h3>
+			<table class="table-telaga-nilam"> 
+				<thead>
+					<tr>
+						<th>Nama Tempat Wisata</th>
+						<th>Harga Tiket Masuk</th>
+						<th>Jam Operasional</th>
+						<th>Pemesanan</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<tr>
+						<td>Telaga Nilam</td>
+						<td>Rp. 15.000</td>
+						<td>Setiap Hari 24 Jam</td>
+						<td><a href="#pesan-tiket_form" id="pesan-tiket_pop"><button>Pesan Tiket</button></a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+	</div>
+
+	<div class="section6" id="grafik">
+		<div class="grafik-lingkaran">
+			<h3>Grafik Kunjungan Wisatawan di Cirebon Tahun 2022</h3>
+			<canvas id="grafik_lingkaran"></canvas>
+		</div>
+	</div>
+
+	<div class="section6" id="grafik">
+		<div class="grafik-batang">
+			<h3>Grafik Perbandingan Kunjungan Wisatawan ke Tempat Wisata di Cirebon Tahun 2022</h3>
+			<canvas id="grafik_batang"></canvas>
+		</div>
+	</div>
+
+		<footer class="footer">
+
+			<div class="footer-left">
+
+				<h3>Wonderful<span>Vacation</span></h3>
+
+				<p class="footer-web-name">Created By - Fernando Valentino @2023</p>
+			</div>
+
+			<div class="footer-center">
+
+				<div>
+					<i class="fa fa-map-marker"></i>
+					<p><span>Harjamukti, Kota Cirebon - 45143</span> Jawa Barat, Indonesia</p>
+				</div>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>+62 878-7522- 1170</p>
+				</div>
+
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:support@wonderfulvacation.com">support@wonderfulvacation.com</a></p>
+				</div>
+
+			</div>
+
+			<div class="footer-right">
+
+				<p class="footer-web-about">
+					<span>About the Website</span>
+					Website kami adalah tempat bagi siapa pun yang mencari inspirasi, informasi, dan panduan perjalanan yang berguna. Jadilah penjelajah sejati, penikmat keindahan alam, dan penggemar budaya yang terbuka untuk pengalaman baru.
+				</p>
+
+				<div class="footer-icons">
+
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-whatsapp"></i></a>
+					<a href="#"><i class="fa fa-instagram"></i></a>
+
+				</div>
+
+			</div>
+
+		</footer>
+
+</body>
+</html>
+
+<!-- Responsive Navigation Bar -->
+<script>
+	function myFunction() {
+		var x = document.getElementById('myTopnav');
+		if(x.className === "topnav"){
+			x.className += " responsive";
+		}else{
+			x.className = "topnav";
+		}
+	}
+</script>
+
+<!-- Gambar ShowSilde -->
+<script type="text/javascript">
+var slideIndex=0;
+showSlides();
+
+function showSlides(){
+	var i;
+	var slides = document.getElementsByClassName("mySlides");
+	var dots = document.getElementsByClassName("dot");
+	for(i = 0; i<slides.length; i++){
+		slides[i].style.display = "none";
+	}
+	slideIndex++;
+
+	if(slideIndex > slides.length){ slideIndex = 1 }
+		for(i = 0; i<dots.length; i++){
+			dots[i].className = dots[i].className.replace(" active","");
+		}
+	slides[slideIndex-1].style.display = "block";
+	dots[slideIndex-1].className += " active";
+	setTimeout(showSlides, 4000);
+}
+</script>
+
+<!-- Gambar PopUp -->
+<script>
+$(document).ready(function() {
+	$('.gallery').magnificPopup({
+		delegate: '.a',
+		type: 'image',
+		tLoading: 'Loading Image #%curr%...',
+		mainClass: 'mfp-img-mobile',
+		gallery:{
+			enabled: true,
+			navigateByImgClick: true,
+			tPrev: 'Previous (Left arrow key)',
+			tNext: 'Next (Right arrow key)', 
+			tCounter: '%curr% of %total%', 
+			preload: [0,1] 
+		},
+		image:{
+			tError: '<a href="%url%">The Image #%curr%</a> could not be loaded.',
+			titleSrc: function(item) {
+				return item.el.attr('title') + '<small>' + item.el.attr('desc') + '</small>';
+			}
+		}
+	});
+	});
+</script>
+
+<!-- Grafik LIngkaran -->
+<script type="text/javascript">
+var ctx = document.getElementById("grafik_lingkaran");
+var grafik_lingkaran = new Chart(ctx, {
+  type: 'doughnut',
+  data: {
+    labels: ["Wisatawan Domestik", "Wisatawan Mancanegara"],
+    datasets: [{
+      data: [63.407, 987.588],
+      backgroundColor: ['#A5C9CA', '#395B64'],
+      hoverBorderColor: "rgba(234, 236, 244, 1)",
+    }],
+  },
+  options: {
+    maintainAspectRatio: false,
+    tooltips: {
+      backgroundColor: "rgb(255,255,255)",
+      bodyFontColor: "#858796",
+      borderColor: '#E7F6F2',
+      borderWidth: 1,
+      xPadding: 15,
+      yPadding: 15,
+      displayColors: false,
+      caretPadding: 10,
+    },
+    legend: {
+      display: true
+    },
+    cutoutPercentage: 0,
+  },
+});
+</script>
+
+<!-- Grafik Batang -->
+<script type="text/javascript">
+var ctx = document.getElementById("grafik_batang");
+var grafik_batang = new Chart(ctx, {
+  type: 'bar',
+  data: {
+    labels: ["Pantai Kejawanan", "Goa Sunyaragi", "Cirebon Waterland", "Keraton Kasepuhan", "Alun - Alun Kejaksan", "Kawasan Batik Trusmi", "Taman Kera Plangon", "Telaga Nilam"],
+    datasets: [{
+      label: "Jumlah Wisatawan",
+      backgroundColor: "#A5C9CA",
+      hoverBackgroundColor: "#395B64",
+      borderColor: "#E7F6F2",
+      data: [100965, 312034, 19097, 90119, 200400, 612458, 40239, 23004 ],
+    }],
+  },
+  options: {
+    maintainAspectRatio: false,
+    layout: {
+      padding: {
+        left: 10,
+        right: 10,
+        top: 10,
+        bottom: 0
+      }
+    },
+    scales: {
+      xAxes: [{
+        time: {
+          unit: ''
+        },
+        gridLines: {
+          display: false,
+          drawBorder: false
+        },
+        ticks: {
+          maxTicksLimit: 10
+        },
+        maxBarThickness: 100,
+      }],
+      yAxes: [{
+        ticks: {
+          min: 0,
+          max: 700000,
+          maxTicksLimit: 10,
+          padding: 5,
+        },
+        gridLines: {
+          color: "rgb(234, 236, 244)",
+          zeroLineColor: "rgb(234, 236, 244)",
+          drawBorder: false,
+          borderDash: [1],
+          zeroLineBorderDash: [1]
+        }
+      }],
+    },
+    legend: {
+      display: true
+    },
+    tooltips: {
+      titleMarginBottom: 10,
+      titleFontColor: '#2C3333',
+      titleFontSize: 14,
+      backgroundColor: "rgb(255,255,255)",
+      bodyFontColor: "#2C3333",
+      borderColor: '#dddfeb',
+      borderWidth: 1,
+      xPadding: 15,
+      yPadding: 15,
+      displayColors: false,
+      caretPadding: 10,
+    },
+  }
+});
+</script>
