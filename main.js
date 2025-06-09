@@ -1,4 +1,4 @@
-<script>
+
 // Blok klik kanan
 document.addEventListener('contextmenu', event => {
   event.preventDefault();
@@ -16,4 +16,3 @@ document.addEventListener('keydown', function(e) {
   }
 });
 
-</script>
